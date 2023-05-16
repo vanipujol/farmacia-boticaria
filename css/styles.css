@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+#header {
+    position: sticky;
+    top: 0;
+}
+
+.navbar a:hover {
+    color: #798DA3;
+}
+
+.navbar-nav .nav-link.active {
+    color: black;
+}
+
+.nav-link {
+    color: #3B4754;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
+}
+
+.navbar {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.banner {
+    background-image: url("../img/banner.jpg");
+    height: 37.5rem;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section-about {
+    height: 80vh;
+}
+.row {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.column-about {
+    flex: 50%;
+    text-align: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #3B4754;
+}
+
+.about {
+    font-size: 1.2rem;
+    color: #798DA3;
+}
+
+.logo {
+    height: 100%;
+    width: 100%;
+}
+
+.sticky {
+    width: 5rem;
+    height: 5rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.social {
+    margin: 5rem 5rem 5rem 15rem;
+}
+
+.redes {
+    margin-right: 2rem;
+}
+
+.author {
+    position: absolute;
+    margin-left: 60%;
+    color: #798DA3;
+}
+
+.column-map {
+    margin: 5rem 2rem 2rem 4rem;
+}
+
+.contact-title {
+    margin: 5rem 0 2rem 0;
+}
+
+.contact-info {
+    margin-left: 0;
+}
+
+.stats-container {
+    width: 33.3%;
+    height: 25rem;
+    background-color: #F8F8FA;
+    text-align: center;
+}
+
+.img-stats {
+    margin-top: 7rem;
+}
+
+.info-stats {
+    font-size: 1.2rem;
+    color: #798DA3;
+    margin-top: 1rem;
+}
+span {
+    font-weight: bold;
+    color: #3B4754;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+.brand {
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-catalogo {
+    color: ghostwhite;
+    background-color: #3B4754;
+    border-radius: 2rem;
+    padding: 1rem 1.2rem 1rem 1.2rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-style: solid;
+    border-width: thin;
+    margin-left: 50rem;
+}
+.button-catalogo:hover {
+    background-color: #798DA3;
+}
+.carousel {
+    width: 45rem;
+    height: 30rem;
+}
+.slide-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;;
+}
+.maps-container {
+    height: 90vh;
+    margin-top: 8rem;
+}
+.gif-maps {
+    height: 80%;
+    width: 100%;
+}
+
