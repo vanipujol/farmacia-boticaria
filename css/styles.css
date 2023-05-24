@@ -1,3 +1,4 @@
+/* Importing Roboto font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
@@ -5,10 +6,12 @@
     padding: 0;
 }
 
+/* Setting the font family for the body */
 body {
     font-family: 'Roboto', serif;
 }
 
+/* Removing underline from links */
 a {
     text-decoration: none;
 }
@@ -19,10 +22,16 @@ a {
     z-index: 2;
 }
 
+.navbar {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    background-color: #F8F8FA;
+}
+
 .navbar a:hover {
     color: #798DA3;
 }
 
+/* Active navbar link styles */
 .navbar-nav .nav-link.active {
     color: black;
 }
@@ -34,26 +43,22 @@ a {
     margin-right: 1rem;
 }
 
-.navbar {
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    background-color: #F8F8FA;
-}
 
-
+/* Minimum height of 70% of the viewport height */
 .min-vh-70 {
     min-height: 70vh;
 }
 
+/* About section row styles */
+.row-about {
+    margin: 4rem auto 4rem auto;
+}
+
+/* About section column styles */
 .column-about {
     flex: 50%;
     text-align: center;
     justify-content: center;
-}
-
-.row-about {
-    /*margin-top: 5rem;*/
-    /*margin-bottom: 5rem;*/
-    margin: 4rem auto 4rem auto;
 }
 
 h1 {
@@ -61,45 +66,49 @@ h1 {
     color: #3B4754;
 }
 
+/* Subheading styles */
 .about {
     font-size: 1.2rem;
     color: #798DA3;
     display: block;
 }
 
+/* Pharmacy image styles */
 .pharmacy-img {
     max-width: 80vw;
 }
 
+/* Pharmacy image styles for smaller screens */
 @media only screen and (max-width: 1000px) {
     .pharmacy-img {
         margin-top: 2rem;
     }
 }
 
-/* Removing boostrap default margin bottom */
+/* Removing bootstrap default margin bottom for paragraphs */
 p {
     margin-bottom: 0;
 }
 
+/* Paragraph styles for the about section */
 .paragraph-about {
     color: #798DA3;
     font-size: 1rem;
     white-space: pre-line;
 }
 
+/* Pharmacy image styles for the about section */
 .pharmacy-img-about {
     max-width: 100%;
     margin-top: 5rem;
 }
 
-/*Image pharmacy responsive media query*/
-
-
+/* Contact section title styles */
 .contact-title {
     margin-bottom: 1.5rem;
 }
 
+/* Contact section paragraph styles */
 .contact-paragraph {
     font-size: 1rem;
     color: #798DA3;
@@ -107,12 +116,14 @@ p {
     display: block;
 }
 
-.logo {
+/* sticky-whatsapp-logo image styles */
+.whatsapp-logo-img {
     height: 100%;
     width: 100%;
 }
 
-.sticky {
+/* Sticky button styles */
+.fixed-whatsapp-logo {
     width: 5rem;
     height: 5rem;
     position: fixed;
@@ -120,28 +131,17 @@ p {
     right: 2rem;
 }
 
+/* Statistics section styles */
 .section-stats {
     background-color: #F8F8FA;
 }
 
-.info-stats {
-    font-size: 1.2rem;
-    color: #798DA3;
-    margin-top: 1rem;
-}
-
-span {
-    font-weight: bold;
-    color: #3B4754;
-    margin-bottom: 0.5rem;
-    display: block;
-}
-
+/* Statistics container styles */
 .stats-container {
     height: 25rem;
 }
 
-/*Stats container responsive media query*/
+/* Statistics container styles for smaller screens */
 @media only screen and (max-width: 1024px) {
     .stats-container {
         height: 100vh;
@@ -150,6 +150,22 @@ span {
     }
 }
 
+/* Statistics information styles */
+.info-stats {
+    font-size: 1.2rem;
+    color: #798DA3;
+    margin-top: 1rem;
+}
+
+/* Styling for span elements */
+span {
+    font-weight: bold;
+    color: #3B4754;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Brand section styles */
 .brand {
     width: 100%;
     height: 30rem;
@@ -158,17 +174,20 @@ span {
     justify-content: center;
 }
 
+/* Vitaly image styles */
 .vitaly-img {
     max-width: 80vw;
     margin-top: 2rem;
 }
 
+/* Button container styles */
 .button-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Catalog button styles */
 .button-catalogo {
     color: ghostwhite;
     background-color: #3B4754;
@@ -178,31 +197,34 @@ span {
     text-decoration: none;
     border-style: solid;
     border-width: thin;
-
 }
 
+/* Hover styles for catalog button */
 .button-catalogo:hover {
     background-color: #798DA3;
 }
 
+/* Vitaly information styles */
 .info-vitaly {
     justify-content: center;
     text-align: center;
     margin: 1.5rem;
 }
 
+/* Paragraph styles for the Vitaly section */
 .paragraph-vitaly {
     color: #798DA3;
     font-size: 1.3rem;
     white-space: pre-line;
 }
 
+/* Carousel styles for the Vitaly section */
 .carousel-vitaly {
     margin: 0 auto;
     width: 45%;
 }
 
-/* Vitaly carousel responsive media query */
+/* Carousel styles for smaller screens */
 @media only screen and (max-width: 1000px) {
     .carousel-vitaly {
         width: 100%;
@@ -224,6 +246,7 @@ span {
     width: 100%;
 }
 
+/* Margin styles for contact section row */
 .contact-row-margin {
     margin-top: 2.5rem;
 }
@@ -242,11 +265,13 @@ form {
     margin-top: 2rem;
 }
 
+/* Label styles for form fields */
 label {
     display: block;
     margin-bottom: 5px;
 }
 
+/* Input and textarea styles for form fields */
 input, textarea {
     width: 100%;
     padding: 0.5rem;
@@ -256,6 +281,7 @@ input, textarea {
     margin-bottom: 0.6rem;
 }
 
+/* Submit button styles */
 .button-enviar {
     background-color: #4CAF50;
     color: white;
@@ -264,10 +290,12 @@ input, textarea {
     width: 7rem;
 }
 
+/* Hover styles for submit button */
 .button-enviar:hover {
     background-color: #798DA3;
 }
 
+/* Footer styles */
 footer {
     background-color: #F8F8FA;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -292,6 +320,7 @@ footer {
     margin-right: 10rem;
 }
 
+/* Footer styles for smaller screens */
 @media only screen and (max-width: 768px) {
     footer {
         flex-direction: column;
@@ -309,30 +338,26 @@ footer {
     }
 }
 
-
-/* Carousel hidden for mobile  */
-
+/* Hidden carousel styles for mobile */
 .hidden-mobile {
     display: block;
 }
 
+/* Hidden carousel styles for smaller screens */
 @media only screen and (max-width: 1000px) {
     .hidden-mobile {
         display: none;
     }
 }
 
-
-/* Carousel only showed for mobile  */
+/* Showed carousel styles for mobile */
 .show-mobile {
     display: none;
 }
 
+/* Showed carousel styles for smaller screens */
 @media only screen and (max-width: 1000px) {
     .show-mobile {
         display: block;
     }
 }
-
-
-
