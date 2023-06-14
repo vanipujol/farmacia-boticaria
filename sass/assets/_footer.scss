@@ -1,0 +1,40 @@
+/* Footer styles */
+footer {
+  background-color: #F8F8FA;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5rem;
+
+  .footer-social {
+    display: flex;
+    margin-left: 10rem;
+
+    .social-icon {
+      margin-right: 1rem;
+    }
+  }
+
+  .footer-author {
+    text-align: right;
+    margin-right: 10rem;
+  }
+
+  /* Footer styles for smaller screens */
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+
+    .footer-social {
+      margin-bottom: 1rem;
+      margin-left: 0;
+    }
+
+    .footer-author {
+      text-align: center;
+      margin-right: 0;
+    }
+  }
+}

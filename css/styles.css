@@ -1,0 +1,470 @@
+@charset "UTF-8";
+/* Importing Roboto font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.navbar {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  background-color: #F8F8FA;
+}
+.navbar a:hover {
+  color: #7D8566;
+}
+.navbar .margin-logo {
+  margin-left: 2rem;
+}
+
+/* Active navbar link styles */
+.navbar-nav .nav-link.active {
+  color: black;
+}
+
+.nav-link {
+  color: #3B4754;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+
+/* Subheading styles in index.html */
+.about {
+  font-size: 1.2rem;
+  color: #798DA3;
+  display: block;
+}
+
+/* Pharmacy image styles */
+.pharmacy-img {
+  max-width: 80vw;
+}
+
+/* Pharmacy image styles for smaller screens */
+@media only screen and (max-width: 1000px) {
+  .pharmacy-img {
+    margin-top: 2rem;
+  }
+}
+/* Brand section styles */
+.brand {
+  width: 100%;
+  height: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Vitaly image styles */
+.vitaly-img {
+  max-width: 80vw;
+  margin-top: 2rem;
+}
+
+/* Button container styles */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Catalog button styles */
+.button-catalogo {
+  color: ghostwhite;
+  background-color: #3B4754;
+  border-radius: 2rem;
+  padding: 1rem 1.2rem 1rem 1.2rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-width: thin;
+}
+
+/* Hover styles for catalog button */
+.button-catalogo:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 4px lightcoral;
+}
+
+.img-about-title {
+  background-image: url("../img/banner/img-about-title.jpg");
+}
+
+/* Paragraph styles for the about section */
+.paragraph-about {
+  color: #798DA3;
+  font-size: 1.1rem;
+  white-space: pre-line;
+}
+
+/* About us testimonials cards */
+.testimonies-card {
+  position: relative;
+  color: #000;
+  text-align: center;
+  background-color: #7D8566;
+  padding: 2rem;
+  background-image: linear-gradient(-25deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+  box-sizing: border-box;
+  /*Testimonials quotes*/
+  /* Circle photo styles*/
+}
+.testimonies-card *, .testimonies-card *:before, .testimonies-card *:after {
+  box-sizing: border-box;
+  transition: all 0.35s ease;
+}
+.testimonies-card div {
+  width: 100%;
+}
+.testimonies-card span,
+.testimonies-card p,
+.testimonies-card blockquote {
+  margin: 0;
+  font-weight: 300;
+}
+.testimonies-card p {
+  color: #fff;
+  font-size: 1.5rem;
+}
+.testimonies-card span {
+  color: #a6a6a6;
+}
+.testimonies-card blockquote {
+  font-size: 1rem;
+  padding: 3rem 2rem 2.5rem 2.5rem;
+  margin-top: 2rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: inset -0.028rem -0.028rem 0.056rem rgba(0, 0, 0, 0.3);
+  text-align: left;
+  position: relative;
+  min-height: 20vh;
+}
+.testimonies-card blockquote:before {
+  content: "“";
+  position: absolute;
+  font-size: 4.375rem;
+  opacity: 0.25;
+  font-style: normal;
+  top: 0;
+  left: 2rem;
+}
+.testimonies-card .profile {
+  width: 6.25rem;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0.093rem 0.093rem 0.625rem rgba(0, 0, 0, 0.4);
+  margin-bottom: 0.625rem;
+  border: solid 0.625rem #a6a57a;
+}
+
+.img-contact-title {
+  background-image: url("../img/banner/img-contact-title.jpg");
+}
+
+.contact-container {
+  margin: 2.5rem;
+}
+
+/* Contact section paragraph styles */
+.contact-paragraph {
+  color: #798DA3;
+  display: block;
+}
+
+/* Margin styles for contact section row */
+.contact-row-margin {
+  margin-top: 2.5rem;
+}
+
+.maps-container {
+  display: flex;
+  margin: 2.5rem;
+}
+
+form {
+  max-width: 50vw;
+  display: grid;
+  margin: 2rem auto auto;
+}
+
+/* form styles for smaller screens */
+@media only screen and (max-width: 768px) {
+  form {
+    max-width: 100%;
+  }
+}
+/* Label styles for form fields */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Input and textarea styles for form fields */
+input, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 0.1rem solid #4CAF50;
+  border-radius: 0.3rem;
+  box-sizing: border-box;
+  margin-bottom: 0.6rem;
+}
+
+/* Submit button styles */
+.button-enviar {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  width: 7rem;
+}
+
+/* Hover styles for submit button */
+.button-enviar:hover {
+  background-color: #798DA3;
+}
+
+.img-points-title {
+  background-image: url("../img/banner/img-points-title.jpg");
+}
+
+.gif-maps {
+  height: 80%;
+  width: 100%;
+}
+
+.img-vitaly-title {
+  background-image: url("../img/vitaly/img-vitaly-title.jpg");
+}
+
+/* Vitaly information styles */
+.info-vitaly {
+  justify-content: center;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+/* Paragraph styles for the Vitaly section */
+.paragraph-vitaly {
+  color: #798DA3;
+  font-size: 1.3rem;
+  white-space: pre-line;
+}
+
+/* Carousel styles for the Vitaly section */
+.carousel-vitaly {
+  margin: 3rem auto;
+  width: 45%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #3B4754;
+}
+
+/* Carousel styles for smaller screens */
+@media only screen and (max-width: 1000px) {
+  .carousel-vitaly {
+    width: 100%;
+  }
+  .paragraph-vitaly {
+    font-size: 1rem;
+  }
+}
+/* Footer styles */
+footer {
+  background-color: #F8F8FA;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5rem;
+  /* Footer styles for smaller screens */
+}
+footer .footer-social {
+  display: flex;
+  margin-left: 10rem;
+}
+footer .footer-social .social-icon {
+  margin-right: 1rem;
+}
+footer .footer-author {
+  text-align: right;
+  margin-right: 10rem;
+}
+@media only screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  footer .footer-social {
+    margin-bottom: 1rem;
+    margin-left: 0;
+  }
+  footer .footer-author {
+    text-align: center;
+    margin-right: 0;
+  }
+}
+
+/* global styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Setting the font family for the body */
+body {
+  font-family: "Roboto", serif;
+}
+
+/* Removing underline from links */
+a {
+  text-decoration: none;
+}
+
+/* Minimum height of 70% of the viewport height */
+.min-vh-70 {
+  min-height: 70vh;
+}
+
+/* row margin for row styles */
+.margin-rows {
+  margin: 4rem auto 4rem auto;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: #3B4754;
+}
+
+/* Removing bootstrap default margin bottom for paragraphs */
+p {
+  margin-bottom: 0;
+}
+
+/* sticky-whatsapp-logo image styles */
+.whatsapp-logo-img {
+  height: 100%;
+  width: 100%;
+}
+
+/* Sticky button styles */
+.fixed-whatsapp-logo {
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+/* Container row icons styles */
+.container-row-icons {
+  height: 25rem;
+}
+
+/* Container row icons styles for smaller screens */
+@media only screen and (max-width: 1024px) {
+  .container-row-icons {
+    height: 100vh;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+  }
+}
+/* Section row icons styles */
+.section-row-icons {
+  background-color: #F9F9FA;
+}
+
+/* Paragraph information icons styles */
+.paragraph-info-icons {
+  font-size: 1.2rem;
+  color: #798DA3;
+  margin-top: 2rem;
+}
+
+/* Styling for span elements */
+span {
+  font-weight: bold;
+  color: #3B4754;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.slide-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hidden carousel styles for mobile */
+.hidden-mobile {
+  display: block;
+}
+
+/* Hidden carousel styles for smaller screens */
+@media only screen and (max-width: 1000px) {
+  .hidden-mobile {
+    display: none;
+  }
+}
+/* Showed carousel styles for mobile */
+.show-mobile {
+  display: none;
+}
+
+/* Showed carousel styles for smaller screens */
+@media only screen and (max-width: 1000px) {
+  .show-mobile {
+    display: block;
+  }
+}
+/*Styles for globals titles*/
+.global-title {
+  color: #7D8566;
+  font-size: 3.5rem;
+}
+
+/* form styles for smaller screens */
+@media only screen and (max-width: 1000px) {
+  .global-title {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+}
+.pharagraph-global-title {
+  color: gray;
+  font-size: 1.3rem;
+}
+
+/* form styles for smaller screens */
+@media only screen and (max-width: 1000px) {
+  .pharagraph-global-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+.img-global-title {
+  max-width: 100%;
+}
+
+/*Remove margin and padding from bootstrap */
+.remove-margin-padding {
+  margin-right: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.image-global {
+  height: 60vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Image global styles for smaller screens */
+@media only screen and (max-width: 1000px) {
+  .image-global {
+    height: 30vh;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

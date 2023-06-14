@@ -1,0 +1,35 @@
+.img-vitaly-title {
+  background-image: url('../img/vitaly/img-vitaly-title.jpg');
+}
+
+/* Vitaly information styles */
+.info-vitaly {
+  justify-content: center;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+/* Paragraph styles for the Vitaly section */
+.paragraph-vitaly {
+  color: #798DA3;
+  font-size: 1.3rem;
+  white-space: pre-line;
+}
+
+/* Carousel styles for the Vitaly section */
+.carousel-vitaly {
+  margin: 3rem auto;
+  width: 45%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #3B4754;
+}
+
+/* Carousel styles for smaller screens */
+@media only screen and (max-width: 1000px) {
+  .carousel-vitaly {
+    width: 100%;
+  }
+
+  .paragraph-vitaly {
+    font-size: 1rem;
+  }
+}

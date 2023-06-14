@@ -1,0 +1,178 @@
+$colordarkgray: #3B4754;
+
+@use 'assets/header';
+@use 'index';
+@use 'about';
+@use 'contact';
+@use 'points';
+@use 'vitaly';
+@use 'assets/footer';
+
+/* Importing Roboto font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* global styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Setting the font family for the body */
+body {
+  font-family: 'Roboto', serif;
+}
+
+/* Removing underline from links */
+a {
+  text-decoration: none;
+}
+
+/* Minimum height of 70% of the viewport height */
+.min-vh-70 {
+  min-height: 70vh;
+}
+
+/* row margin for row styles */
+.margin-rows {
+  margin: 4rem auto 4rem auto;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: $colordarkgray;
+}
+
+/* Removing bootstrap default margin bottom for paragraphs */
+p {
+  margin-bottom: 0;
+}
+
+/* sticky-whatsapp-logo image styles */
+.whatsapp-logo-img {
+  height: 100%;
+  width: 100%;
+}
+
+/* Sticky button styles */
+.fixed-whatsapp-logo {
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+/* Container row icons styles */
+.container-row-icons {
+  height: 25rem;
+}
+
+/* Container row icons styles for smaller screens */
+@media only screen and (max-width: 1024px) {
+  .container-row-icons {
+    height: 100vh;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+  }
+}
+
+/* Section row icons styles */
+.section-row-icons {
+  background-color: #F9F9FA;
+}
+
+/* Paragraph information icons styles */
+.paragraph-info-icons {
+  font-size: 1.2rem;
+  color: #798DA3;
+  margin-top: 2rem;
+}
+
+/* Styling for span elements */
+span {
+  font-weight: bold;
+  color: $colordarkgray;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.slide-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hidden carousel styles for mobile */
+.hidden-mobile {
+  display: block;
+}
+
+/* Hidden carousel styles for smaller screens */
+@media only screen and (max-width: 1000px) {
+  .hidden-mobile {
+    display: none;
+  }
+}
+
+/* Showed carousel styles for mobile */
+.show-mobile {
+  display: none;
+}
+
+/* Showed carousel styles for smaller screens */
+@media only screen and (max-width: 1000px) {
+  .show-mobile {
+    display: block;
+  }
+}
+
+/*Styles for globals titles*/.global-title {
+  color: #7D8566;
+  font-size: 3.5rem;
+}
+
+/* form styles for smaller screens */
+@media only screen and (max-width: 1000px) {
+  .global-title {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+}
+
+.pharagraph-global-title {
+  color: gray;
+  font-size: 1.3rem;
+}
+
+/* form styles for smaller screens */
+@media only screen and (max-width: 1000px) {
+  .pharagraph-global-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.img-global-title {
+  max-width: 100%;
+}
+
+/*Remove margin and padding from bootstrap */
+.remove-margin-padding {
+  margin-right: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.image-global {
+  height: 60vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Image global styles for smaller screens */
+@media only screen and (max-width: 1000px) {
+  .image-global {
+    height: 30vh;
+  }
+}
