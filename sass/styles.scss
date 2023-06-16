@@ -9,7 +9,7 @@ $colordarkgray: #3B4754;
 @use 'assets/footer';
 
 /* Importing Roboto font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
 
 /* global styles */
 * {
@@ -78,7 +78,7 @@ p {
 
 /* Section row icons styles */
 .section-row-icons {
-  background-color: #F9F9FA;
+  background-color: #FFF1E1;
 }
 
 /* Paragraph information icons styles */
@@ -126,7 +126,8 @@ span {
   }
 }
 
-/*Styles for globals titles*/.global-title {
+/*Styles for globals titles*/
+.global-title {
   color: #7D8566;
   font-size: 3.5rem;
 }
@@ -161,6 +162,10 @@ span {
   margin-right: 0;
   padding-right: 0;
   padding-left: 0;
+}
+
+.row-color {
+  background-color: #f5ece278;
 }
 
 .image-global {

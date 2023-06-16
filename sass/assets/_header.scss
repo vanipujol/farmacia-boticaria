@@ -5,11 +5,13 @@
 }
 
 .navbar {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  background-color: #F8F8FA;
-
+  box-shadow: 0 1px 1px 0 rgba(250, 232, 212, 1), 0 1px 1px 0 rgb(154, 171, 129);
+  background-color: #7D8566;
+  font-weight: 300;
+  height: 10vh;
   a:hover {
-    color: #7D8566;
+    color: #FAE8D4;
+    font-weight: 300;
   }
 
   .margin-logo {
@@ -20,12 +22,12 @@
 /* Active navbar link styles */
 .navbar-nav {
   .nav-link.active {
-    color: black;
+    color: #FAE8D4;
   }
 }
 
 .nav-link {
-  color: #3B4754;
+  color: white;
   font-size: 1.2rem;
   margin-left: 2rem;
   margin-right: 1rem;
