@@ -5,16 +5,16 @@
 }
 
 .navbar {
-  box-shadow: 0 1px 1px 0 rgba(250, 232, 212, 1), 0 1px 1px 0 rgb(154, 171, 129);
   background-color: #7D8566;
   font-weight: 300;
-  height: 10vh;
+  height: 13vh;
   a:hover {
     color: #FAE8D4;
   }
 
   .margin-logo {
-    margin-left: 2rem;
+    position: absolute;
+    margin-left: 6rem;
   }
 }
 
@@ -32,3 +32,6 @@
   margin-left: 2rem;
   margin-right: 1rem;
 }
+
+
+

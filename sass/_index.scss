@@ -1,3 +1,14 @@
+/* Line navbar only index*/
+.navbarline::after {
+  content: "";
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+  width: 90%;
+  height: 1px;
+  background-color: white;
+}
+
 /* Subheading styles in index.html */
 .about {
   font-size: 1.3rem;
@@ -84,3 +95,49 @@
   transition: color 0.3s ease 0s, background 0s ease 0.3s;
   font-style: italic;
 }
+
+
+.scroll-down-arrow {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  animation: arrowBounce 2s infinite;
+}
+
+.arrow {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+@keyframes arrowBounce {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
