@@ -15,6 +15,12 @@ $colorparagraph: gray;
   height: 90vh;
 }
 
+.min-vh-mobile{
+  @media only screen and (max-width: 1000px) {
+    min-height: 105vh;
+  }
+}
+
 /* Pharmacy image styles */
 .pharmacy-img {
   max-width: 80vw;
