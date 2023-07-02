@@ -1,8 +1,24 @@
+$colorgreen: #7D8566;
+$colorwhite: white;
+$colorparagraph: gray;
+
 /* Subheading styles in index.html */
 .about {
-  font-size: 1.2rem;
-  color: #798DA3;
+  font-size: 1.3rem;
+  color: $colorparagraph;
   display: block;
+  font-weight: 300;
+  white-space: pre-line;
+}
+
+.row-about {
+  height: 90vh;
+}
+
+.min-vh-mobile{
+  @media only screen and (max-width: 1000px) {
+    min-height: 105vh;
+  }
 }
 
 /* Pharmacy image styles */
@@ -17,41 +33,107 @@
   }
 }
 
-/* Brand section styles */
-.brand {
+/*Removing bootstraps container styles*/
+.container-flower{
   width: 100%;
-  height: 30rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0;
 }
 
-/* Vitaly image styles */
-.vitaly-img {
-  max-width: 80vw;
-  margin-top: 2rem;
+/* Row vitaly styles */
+.row-vitaly {
+  margin-top: 5rem;
 }
 
-/* Button container styles */
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Catalog button styles */
-.button-catalogo {
-  color: ghostwhite;
-  background-color: #3B4754;
-  border-radius: 2rem;
-  padding: 1rem 1.2rem 1rem 1.2rem;
-  font-size: 1.2rem;
+/* Button styles */
+.button {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  padding: 8px 20px;
+  text-align: center;
+  border: 0.1rem solid $colorgreen;
   text-decoration: none;
-  border-width: thin;
+  color: $colorgreen;
+  white-space: nowrap;
+  z-index: 0;
+  border-radius: 0.2rem;
+  margin-top: 1rem;
 }
 
-/* Hover styles for catalog button */
-.button-catalogo:hover {
-  cursor: pointer;
-  box-shadow: 0 4px 4px lightcoral;
+.button i {
+  padding-right: 8px;
 }
+
+/* Slide effect fot the button */
+.slide-effect::before {
+  position: absolute;
+  content: "";
+  background: $colorgreen;
+  transition-duration: 0.3s;
+  z-index: -1;
+  inset: 0 0 auto auto;
+  width: 0;
+  height: 100%;
+  opacity: 1;
+}
+
+.slide-effect:hover::before {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.slide-effect:hover {
+  color: $colorwhite;
+  transition: color 0.3s ease 0s, background 0s ease 0.3s;
+  font-style: italic;
+}
+
+/* Styles for scroll down arrow */
+.scroll-down-arrow {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  animation: arrowBounce 2s infinite;
+}
+
+.arrow {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: solid $colorwhite;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+@keyframes arrowBounce {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+

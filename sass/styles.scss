@@ -1,4 +1,6 @@
-$colordarkgray: #3B4754;
+$colorgreen: #7D8566;
+$colorp: white;
+$colorparagraph: gray;
 
 @use 'assets/header';
 @use 'index';
@@ -9,7 +11,7 @@ $colordarkgray: #3B4754;
 @use 'assets/footer';
 
 /* Importing Roboto font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
 
 /* global styles */
 * {
@@ -35,16 +37,25 @@ a {
 /* row margin for row styles */
 .margin-rows {
   margin: 4rem auto 4rem auto;
+
+  @media only screen and (max-width: 1024px) {
+    margin: auto;
+  }
 }
 
 h1 {
-  font-size: 1.8rem;
-  color: $colordarkgray;
+  font-size: 2rem;
+  color: $colorgreen;
 }
 
 /* Removing bootstrap default margin bottom for paragraphs */
 p {
   margin-bottom: 0;
+  color: $colorp;
+}
+
+li {
+  list-style: none;
 }
 
 /* sticky-whatsapp-logo image styles */
@@ -78,20 +89,20 @@ p {
 
 /* Section row icons styles */
 .section-row-icons {
-  background-color: #F9F9FA;
+  background-color: rgba(126, 133, 100, 0.1);
 }
 
 /* Paragraph information icons styles */
 .paragraph-info-icons {
   font-size: 1.2rem;
-  color: #798DA3;
+  color: $colorparagraph;
   margin-top: 2rem;
 }
 
 /* Styling for span elements */
 span {
   font-weight: bold;
-  color: $colordarkgray;
+  color: rgba(42, 42, 42, 0.72);
   margin-bottom: 0.5rem;
   display: block;
 }
@@ -102,7 +113,7 @@ span {
   justify-content: center;
 }
 
-/* Hidden carousel styles for mobile */
+/* Global hidden styles for mobile */
 .hidden-mobile {
   display: block;
 }
@@ -114,7 +125,7 @@ span {
   }
 }
 
-/* Showed carousel styles for mobile */
+/* Showed global styles for mobile */
 .show-mobile {
   display: none;
 }
@@ -126,8 +137,9 @@ span {
   }
 }
 
-/*Styles for globals titles*/.global-title {
-  color: #7D8566;
+/*Styles for globals titles*/
+.global-title {
+  color: $colorgreen;
   font-size: 3.5rem;
 }
 
@@ -135,19 +147,18 @@ span {
 @media only screen and (max-width: 1000px) {
   .global-title {
     font-size: 2rem;
-    margin-top: 2rem;
   }
 }
 
-.pharagraph-global-title {
-  color: gray;
+.pharagraph-global {
+  color: $colorparagraph;
   font-size: 1.3rem;
 }
 
 /* form styles for smaller screens */
 @media only screen and (max-width: 1000px) {
-  .pharagraph-global-title {
-    font-size: 1rem;
+  .pharagraph-global {
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
   }
 }
@@ -155,14 +166,25 @@ span {
 .img-global-title {
   max-width: 100%;
 }
-
-/*Remove margin and padding from bootstrap */
-.remove-margin-padding {
-  margin-right: 0;
-  padding-right: 0;
-  padding-left: 0;
+/* Padding with 2 rem */
+.padding-2{
+  padding: 2rem;
+}
+/*Remove all margin and padding from bootstrap */
+.remove-margin-all {
+  margin: 0;
 }
 
+/*Remove margin and padding from bootstrap */
+.remove-margin {
+  margin-right: 0;
+}
+
+.row-color {
+  background-color: rgba(126, 133, 100, 0.1);
+}
+
+/* Global image styles */
 .image-global {
   height: 60vh;
   background-position: center;
@@ -175,4 +197,9 @@ span {
   .image-global {
     height: 30vh;
   }
+}
+
+.title-second {
+  color: $colorgreen;
+  margin: 3rem;
 }

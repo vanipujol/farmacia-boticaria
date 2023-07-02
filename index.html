@@ -7,15 +7,17 @@
           content="Descubrí una amplia gama de productos naturales y soluciones holísticas para promover tu bienestar y mejorar tu calidad de vida">
     <meta name="keywords" content="cuidado personal, medicamentos, homeopatía, natural">
 
-    <meta property="og:title" content="Farmacia Boticaria | Cruz del eje - Córdoba" />
-    <meta property="og:description" content="Descubrí una amplia gama de productos naturales y soluciones holísticas para promover tu bienestar y mejorar tu calidad de vida" />
-    <meta property="og:url" content="https://vanipujol.github.io/farmacia-boticaria/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="./img/banner/banner-logo.jpg" />
+    <meta property="og:title" content="Farmacia Boticaria | Cruz del eje - Córdoba"/>
+    <meta property="og:description"
+          content="Descubrí una amplia gama de productos naturales y soluciones holísticas para promover tu bienestar y mejorar tu calidad de vida"/>
+    <meta property="og:url" content="https://vanipujol.github.io/farmacia-boticaria/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="./img/banner/banner-logo.jpg"/>
 
-    <meta property="twitter:title" content="Farmacia Boticaria | Cruz del eje - Córdoba" />
-    <meta property="twitter:description" content="Descubrí una amplia gama de productos naturales y soluciones holísticas para promover tu bienestar y mejorar tu calidad de vida" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Farmacia Boticaria | Cruz del eje - Córdoba"/>
+    <meta property="twitter:description"
+          content="Descubrí una amplia gama de productos naturales y soluciones holísticas para promover tu bienestar y mejorar tu calidad de vida"/>
+    <meta name="twitter:card" content="summary_large_image"/>
 
     <title>Farmacia Boticaria | Cruz del eje - Córdoba </title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico.png">
@@ -25,10 +27,11 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+<!-- Navbar header  -->
 <header id="header">
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand show-mobile margin-logo" href="./index.html">
-            <img src="./img/logo-navbar.png" width="65" height="65" alt="">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand margin-logo" href="./index.html">
+            <img src="./img/logo-navbar.png" width="120" height="120" alt="logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,27 +39,23 @@
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="index.html">Inicio</a>
-                <a class="nav-item nav-link" href="./pages/about.html">Nosotros</a>
-                <a class="nav-item nav-link" href="./pages/vitaly.html">Vitaly</a>
-                <a class="nav-item nav-link" href="./pages/points.html">Puntos de envío</a>
-                <a class="nav-item nav-link" href="./pages/contact.html">Contacto</a>
+                <a class="nav-item nav-link active" href="index.html">INICIO</a>
+                <a class="nav-item nav-link" href="./pages/about.html">NOSOTROS</a>
+                <a class="nav-item nav-link" href="./pages/vitaly.html">VITALY</a>
+                <a class="nav-item nav-link" href="./pages/points.html">PUNTOS DE ENVÍO</a>
+                <a class="nav-item nav-link" href="./pages/contact.html">CONTACTO</a>
             </div>
         </div>
     </nav>
 </header>
 <main>
     <section>
-
         <!--   Carousel only showed for desktop     -->
         <div class="slide-container hidden-mobile">
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="./img/banner/banner-logo.jpg" class="d-block w-100 " alt="farmacia">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./img/banner/banner-whatsapp.jpg" class="d-block w-100 " alt="Whatsapp">
                     </div>
                     <div class="carousel-item">
                         <img src="./img/banner/banner-vitaly.jpg" class="d-block w-100" alt="vitaly">
@@ -73,6 +72,9 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+            <a href="#scroll-down" class="scroll-down-arrow">
+                <span class="arrow"></span>
+            </a>
         </div>
         <!--   Carousel only showed for mobile     -->
         <div class="slide-container show-mobile">
@@ -80,9 +82,6 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="./img/banner/banner-logo-mobile.png" class="d-block w-100 " alt="farmacia">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./img/banner/banner-whatsapp-mobile.png" class="d-block w-100 " alt="Whatsapp">
                     </div>
                     <div class="carousel-item">
                         <img src="./img/banner/banner-vitaly-mobile.png" class="d-block w-100 " alt="vitaly">
@@ -101,15 +100,20 @@
             </div>
         </div>
     </section>
-    <section>
-        <div class="container">
-            <div class="row text-center align-items-center margin-rows">
-                <div class="col-sm-12 col-lg-6">
-                    <h1 data-aos="fade-up" data-aos-delay="300">¿Quiénes somos? </h1> <br>
-                    <p data-aos="fade-up"  data-aos-delay="300"  class="about"> Somos una farmacia de la Ciudad de Cruz del Eje, Córdoba, comprometida en brindar
-                        atención farmacéutica integral y personalizada, tanto a nivel convencional como en el ámbito de
-                        la homeopatía.
+    <!-- About us section    -->
+    <section class="min-vh-mobile">
+        <div id="scroll-down" class="container">
+            <div class="row text-center align-items-center margin-rows row-about">
+                <div class="col-sm-12 col-lg-6 padding-2">
+                    <h1 data-aos="fade-up" data-aos-delay="300">¿Quiénes somos? </h1>
+                    <p data-aos="fade-up"  data-aos-delay="300"  class="about"> Somos una farmacia de la Ciudad de Cruz del Eje, Córdoba,
+                        comprometida en brindar atención farmacéutica integral y personalizada, tanto a nivel convencional
+                        como en el ámbito de la homeopatía.
                     </p>
+                    <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300"
+                         data-aos-offset="0">
+                        <a href="pages/about.html" class="button slide-effect">VER MÁS</a>
+                    </div>
                 </div>
                 <div class="col-sm-12 col-lg-6">
                     <img data-aos="fade-up" data-aos-delay="300" src="./img/silvina.png" alt="farmacia boticaria"
@@ -118,6 +122,7 @@
             </div>
         </div>
     </section>
+    <!-- Stats section  -->
     <section class="section-row-icons">
         <div class="container">
             <div class="row text-center align-items-center container-row-icons">
@@ -126,7 +131,7 @@
                     <p class="paragraph-info-icons" data-aos="fade-up" data-aos-delay="300"><span>+26 años</span>Acompañando
                         en el cuidado <br> de la salud</p>
                 </div>
-                <div class="col-sm-12 col-lg-4 ">
+                <div class="col-sm-12 col-lg-4">
                     <img src="img/stats/natural.png" alt="natural">
                     <p class="paragraph-info-icons" data-aos="fade-up" data-aos-delay="500"><span>+70%</span>
                         Reconocimiento por su experiencia <br>y asesoramiento en
@@ -140,31 +145,53 @@
             </div>
         </div>
     </section>
+    <!-- Section vitaly brand  -->
     <section>
-        <div class="brand" data-aos="fade-up" data-aos-delay="600">
-            <img src="img/vitaly/vitaly.png" alt="vitaly" class="vitaly-img">
-        </div>
-        <div class="button-container">
-            <a class="button-catalogo" href="pages/vitaly.html">Ver catálogo</a>
+        <div class="container container-flower">
+            <div class="row row-vitaly">
+                <div class="col-sm-12 col-lg-4" data-aos="fade-right" data-aos-duration="2000">
+                    <img src="/img/vitaly/flower-left.png" alt="flor" class="img-fluid flower-left hidden-mobile">
+                </div>
+                <div class="col-sm-12 col-lg-4 ">
+                    <img src="/img/vitaly/vitaly.png" alt="Logo vitaly" width="90%" class=" mx-auto d-block">
+                    <div class="text-center" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200"
+                         data-aos-offset="0">
+                        <a href="pages/vitaly.html" class="button slide-effect">Ver productos</a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-4" data-aos="fade-left" data-aos-duration="2000">
+                    <img src="/img/vitaly/flower-right.png" alt="flor" class="img-fluid flower-right hidden-mobile">
+                </div>
+            </div>
         </div>
     </section>
 </main>
+<!-- Whatsapp button  -->
 <a href="https://api.whatsapp.com/send/?phone=%2B5493549525618&text&type=phone_number&app_absent=0" target="_blank"
-   class="fixed-whatsapp-logo" data-aos="zoom-in-left"> <img class="whatsapp-logo-img" src="img/socials/whatsapp.png"
-                                                             alt="Whatsapp"></a>
+   class="fixed-whatsapp-logo" data-aos="zoom-in-left">
+    <img class="whatsapp-logo-img" src="img/socials/whatsapp.png" alt="Whatsapp">
+</a>
+<!-- Footer  -->
 <footer>
-    <div class="footer-social">
-        <a href="https://www.instagram.com/farmaciaboticaria/" target=_blank" class="social-icon">
-            <img src="img/socials/instagram.png" alt="Instagram"/>
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=100092384708346" target=_blank" class="social-icon">
-            <img src="img/socials/facebook.png" alt="Facebook"/>
-        </a>
-    </div>
-    <div class="footer-author">
-        <p>© 2023 VP</p>
+    <ul>
+        <li>
+            <a href="https://www.facebook.com/profile.php?id=100092384708346" target="_blank">
+                <span class="fa fa-facebook social-icons"></span>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/farmaciaboticaria/" target="_blank">
+                <span class="fa fa-instagram social-icons"></span>
+            </a>
+        </li>
+    </ul>
+    <div class="author">
+        <p>
+            © 2023 VP
+        </p>
     </div>
 </footer>
+<!-- Scripts  -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();

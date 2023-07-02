@@ -1,6 +1,7 @@
 @charset "UTF-8";
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
 /* Importing Roboto font from Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap");
 #header {
   position: sticky;
   top: 0;
@@ -8,33 +9,64 @@
 }
 
 .navbar {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  background-color: #F8F8FA;
+  background-color: #7E8564;
+  font-weight: 300;
+  height: 13vh;
+  border-bottom: 1px solid white;
+  /* Logo mobile styles for smaller screens */
 }
 .navbar a:hover {
-  color: #7D8566;
+  color: rgba(250, 232, 212, 0.7764705882);
+}
+.navbar .navbar-toggler {
+  margin-right: 1em;
+  border: 1px solid rgba(252, 252, 252, 0.6196078431);
 }
 .navbar .margin-logo {
-  margin-left: 2rem;
+  position: absolute;
+  margin-left: 6rem;
+}
+@media only screen and (max-width: 1000px) {
+  .navbar {
+    height: 100%;
+  }
+  .navbar .margin-logo {
+    position: relative;
+    display: block;
+    margin-left: 3em;
+  }
 }
 
 /* Active navbar link styles */
 .navbar-nav .nav-link.active {
-  color: black;
+  color: rgba(250, 232, 212, 0.7764705882);
+  font-weight: 400;
 }
 
 .nav-link {
-  color: #3B4754;
-  font-size: 1.2rem;
+  color: white;
+  font-size: 1.3rem;
   margin-left: 2rem;
   margin-right: 1rem;
 }
 
 /* Subheading styles in index.html */
 .about {
-  font-size: 1.2rem;
-  color: #798DA3;
+  font-size: 1.3rem;
+  color: gray;
   display: block;
+  font-weight: 300;
+  white-space: pre-line;
+}
+
+.row-about {
+  height: 90vh;
+}
+
+@media only screen and (max-width: 1000px) {
+  .min-vh-mobile {
+    min-height: 105vh;
+  }
 }
 
 /* Pharmacy image styles */
@@ -48,52 +80,110 @@
     margin-top: 2rem;
   }
 }
-/* Brand section styles */
-.brand {
+/*Removing bootstraps container styles*/
+.container-flower {
   width: 100%;
-  height: 30rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0;
 }
 
-/* Vitaly image styles */
-.vitaly-img {
-  max-width: 80vw;
-  margin-top: 2rem;
+/* Row vitaly styles */
+.row-vitaly {
+  margin-top: 5rem;
 }
 
-/* Button container styles */
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Catalog button styles */
-.button-catalogo {
-  color: ghostwhite;
-  background-color: #3B4754;
-  border-radius: 2rem;
-  padding: 1rem 1.2rem 1rem 1.2rem;
-  font-size: 1.2rem;
+/* Button styles */
+.button {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  padding: 8px 20px;
+  text-align: center;
+  border: 0.1rem solid #7D8566;
   text-decoration: none;
-  border-width: thin;
+  color: #7D8566;
+  white-space: nowrap;
+  z-index: 0;
+  border-radius: 0.2rem;
+  margin-top: 1rem;
 }
 
-/* Hover styles for catalog button */
-.button-catalogo:hover {
-  cursor: pointer;
-  box-shadow: 0 4px 4px lightcoral;
+.button i {
+  padding-right: 8px;
 }
 
+/* Slide effect fot the button */
+.slide-effect::before {
+  position: absolute;
+  content: "";
+  background: #7D8566;
+  transition-duration: 0.3s;
+  z-index: -1;
+  inset: 0 0 auto auto;
+  width: 0;
+  height: 100%;
+  opacity: 1;
+}
+
+.slide-effect:hover::before {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.slide-effect:hover {
+  color: white;
+  transition: color 0.3s ease 0s, background 0s ease 0.3s;
+  font-style: italic;
+}
+
+/* Styles for scroll down arrow */
+.scroll-down-arrow {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  animation: arrowBounce 2s infinite;
+}
+
+.arrow {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+@keyframes arrowBounce {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Add image in background image*/
 .img-about-title {
-  background-image: url("../img/banner/img-about-title.jpg");
+  background-image: url("../img/vitaly/img-vitaly-title.jpg");
 }
 
 /* Paragraph styles for the about section */
 .paragraph-about {
-  color: #798DA3;
+  color: gray;
   font-size: 1.1rem;
   white-space: pre-line;
 }
@@ -124,14 +214,14 @@
   font-weight: 300;
 }
 .testimonies-card p {
-  color: #fff;
+  color: white;
   font-size: 1.5rem;
 }
 .testimonies-card span {
   color: #a6a6a6;
 }
 .testimonies-card blockquote {
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 3rem 2rem 2.5rem 2.5rem;
   margin-top: 2rem;
   background-color: #fff;
@@ -139,7 +229,7 @@
   box-shadow: inset -0.028rem -0.028rem 0.056rem rgba(0, 0, 0, 0.3);
   text-align: left;
   position: relative;
-  min-height: 20vh;
+  min-height: 25vh;
 }
 .testimonies-card blockquote:before {
   content: "“";
@@ -159,6 +249,7 @@
   border: solid 0.625rem #a6a57a;
 }
 
+/* Add image in background image*/
 .img-contact-title {
   background-image: url("../img/banner/img-contact-title.jpg");
 }
@@ -169,7 +260,7 @@
 
 /* Contact section paragraph styles */
 .contact-paragraph {
-  color: #798DA3;
+  color: gray;
   display: block;
 }
 
@@ -205,7 +296,7 @@ label {
 input, textarea {
   width: 100%;
   padding: 0.5rem;
-  border: 0.1rem solid #4CAF50;
+  border: 0.1rem solid #7D8566;
   border-radius: 0.3rem;
   box-sizing: border-box;
   margin-bottom: 0.6rem;
@@ -213,7 +304,7 @@ input, textarea {
 
 /* Submit button styles */
 .button-enviar {
-  background-color: #4CAF50;
+  background-color: #7D8566;
   color: white;
   border: none;
   border-radius: 2rem;
@@ -222,11 +313,22 @@ input, textarea {
 
 /* Hover styles for submit button */
 .button-enviar:hover {
-  background-color: #798DA3;
+  background-color: #2A2A2A;
+  color: white;
 }
 
+/* Add image in background image*/
 .img-points-title {
   background-image: url("../img/banner/img-points-title.jpg");
+}
+
+.background-color-map {
+  background-color: #7E8564;
+}
+@media only screen and (max-width: 1000px) {
+  .background-color-map {
+    background-color: white;
+  }
 }
 
 .gif-maps {
@@ -234,6 +336,48 @@ input, textarea {
   width: 100%;
 }
 
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Removing padding from Boostrap*/
+.remove-padding {
+  padding: 0 !important;
+}
+
+.ul-points li {
+  color: #F1F2EE;
+  font-size: 1.6rem;
+  margin-left: 5em;
+  /* Styles for smaller screens */
+}
+@media only screen and (max-width: 1000px) {
+  .ul-points li {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-left: 0;
+    color: gray;
+  }
+}
+
+/* Styles for section hours */
+.section-hours {
+  height: 10rem;
+  margin-top: 5rem;
+}
+@media only screen and (max-width: 1024px) {
+  .section-hours {
+    margin-top: 3rem;
+  }
+}
+
+.title-three {
+  color: #7E8564;
+  margin: 1rem;
+}
+
+/* Add image in background image*/
 .img-vitaly-title {
   background-image: url("../img/vitaly/img-vitaly-title.jpg");
 }
@@ -242,67 +386,107 @@ input, textarea {
 .info-vitaly {
   justify-content: center;
   text-align: center;
-  margin-top: 5rem;
+  margin: 4rem;
 }
 
-/* Paragraph styles for the Vitaly section */
-.paragraph-vitaly {
-  color: #798DA3;
-  font-size: 1.3rem;
-  white-space: pre-line;
+.card {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  min-height: 28em;
 }
 
-/* Carousel styles for the Vitaly section */
-.carousel-vitaly {
-  margin: 3rem auto;
-  width: 45%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #3B4754;
+.card-title {
+  font-size: 1.5rem;
+  color: #7D8566;
+  font-weight: 400;
 }
 
-/* Carousel styles for smaller screens */
-@media only screen and (max-width: 1000px) {
-  .carousel-vitaly {
-    width: 100%;
-  }
-  .paragraph-vitaly {
-    font-size: 1rem;
-  }
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+  transition: transform 1s;
+  transform-style: preserve-3d;
 }
+
+.card:hover .content {
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+}
+
+.back {
+  background: #7D8566;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  line-height: 2rem;
+  color: #7D8566;
+  text-align: center;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.paragraph-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 1rem;
+  color: white;
+}
+
 /* Footer styles */
 footer {
-  background-color: #F8F8FA;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  padding: 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #7D8566;
+  padding: 2rem;
+  text-align: center;
   margin-top: 5rem;
-  /* Footer styles for smaller screens */
 }
-footer .footer-social {
+footer ul {
   display: flex;
-  margin-left: 10rem;
+  margin: 0;
+  justify-content: center;
+  padding: 0;
 }
-footer .footer-social .social-icon {
-  margin-right: 1rem;
+footer ul li {
+  list-style: none;
+  width: 4em;
+  height: 4em;
+  /* Footer social icons styles*/
 }
-footer .footer-author {
-  text-align: right;
-  margin-right: 10rem;
+footer ul li span {
+  border-radius: 50%;
+  width: 70%;
+  height: 70%;
+  background: #2a2a2a;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
-@media only screen and (max-width: 768px) {
-  footer {
-    flex-direction: column;
-    text-align: center;
-  }
-  footer .footer-social {
-    margin-bottom: 1rem;
-    margin-left: 0;
-  }
-  footer .footer-author {
-    text-align: center;
-    margin-right: 0;
-  }
+footer ul li span:hover {
+  transition: 0.3s;
+}
+footer ul li .social-icons {
+  display: flex;
+  font-size: 1.3rem;
+  color: white;
+  transition: 1s ease-out;
+}
+footer ul li:nth-child(1):hover span {
+  background: #2C3456;
+}
+footer ul li:nth-child(2):hover span {
+  background: #CC296C;
 }
 
 /* global styles */
@@ -330,15 +514,25 @@ a {
 .margin-rows {
   margin: 4rem auto 4rem auto;
 }
+@media only screen and (max-width: 1024px) {
+  .margin-rows {
+    margin: auto;
+  }
+}
 
 h1 {
-  font-size: 1.8rem;
-  color: #3B4754;
+  font-size: 2rem;
+  color: #7D8566;
 }
 
 /* Removing bootstrap default margin bottom for paragraphs */
 p {
   margin-bottom: 0;
+  color: white;
+}
+
+li {
+  list-style: none;
 }
 
 /* sticky-whatsapp-logo image styles */
@@ -371,20 +565,20 @@ p {
 }
 /* Section row icons styles */
 .section-row-icons {
-  background-color: #F9F9FA;
+  background-color: rgba(126, 133, 100, 0.1);
 }
 
 /* Paragraph information icons styles */
 .paragraph-info-icons {
   font-size: 1.2rem;
-  color: #798DA3;
+  color: gray;
   margin-top: 2rem;
 }
 
 /* Styling for span elements */
 span {
   font-weight: bold;
-  color: #3B4754;
+  color: rgba(42, 42, 42, 0.72);
   margin-bottom: 0.5rem;
   display: block;
 }
@@ -395,7 +589,7 @@ span {
   justify-content: center;
 }
 
-/* Hidden carousel styles for mobile */
+/* Global hidden styles for mobile */
 .hidden-mobile {
   display: block;
 }
@@ -406,7 +600,7 @@ span {
     display: none;
   }
 }
-/* Showed carousel styles for mobile */
+/* Showed global styles for mobile */
 .show-mobile {
   display: none;
 }
@@ -427,18 +621,17 @@ span {
 @media only screen and (max-width: 1000px) {
   .global-title {
     font-size: 2rem;
-    margin-top: 2rem;
   }
 }
-.pharagraph-global-title {
+.pharagraph-global {
   color: gray;
   font-size: 1.3rem;
 }
 
 /* form styles for smaller screens */
 @media only screen and (max-width: 1000px) {
-  .pharagraph-global-title {
-    font-size: 1rem;
+  .pharagraph-global {
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
   }
 }
@@ -446,13 +639,26 @@ span {
   max-width: 100%;
 }
 
-/*Remove margin and padding from bootstrap */
-.remove-margin-padding {
-  margin-right: 0;
-  padding-right: 0;
-  padding-left: 0;
+/* Padding with 2 rem */
+.padding-2 {
+  padding: 2rem;
 }
 
+/*Remove all margin and padding from bootstrap */
+.remove-margin-all {
+  margin: 0;
+}
+
+/*Remove margin and padding from bootstrap */
+.remove-margin {
+  margin-right: 0;
+}
+
+.row-color {
+  background-color: rgba(126, 133, 100, 0.1);
+}
+
+/* Global image styles */
 .image-global {
   height: 60vh;
   background-position: center;
@@ -465,6 +671,10 @@ span {
   .image-global {
     height: 30vh;
   }
+}
+.title-second {
+  color: #7D8566;
+  margin: 3rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
