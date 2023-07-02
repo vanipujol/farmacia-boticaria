@@ -1,3 +1,8 @@
+$colorgreen: #7E8564;
+$colornav: white;
+$colorhover: #FAE8D4C6;
+$colornavtoggler: #FCFCFC9E;
+
 #header {
   position: sticky;
   top: 0;
@@ -5,30 +10,45 @@
 }
 
 .navbar {
-  background-color: #7D8566;
+  background-color: $colorgreen;
   font-weight: 300;
   height: 13vh;
+  border-bottom: 1px solid $colornav;
   a:hover {
-    color: #FAE8D4;
+    color: $colorhover;
   }
 
+  .navbar-toggler{
+    margin-right: 1em;
+    border: 1px solid $colornavtoggler;
+  }
   .margin-logo {
     position: absolute;
     margin-left: 6rem;
+  }
+
+  /* Logo mobile styles for smaller screens */
+  @media only screen and (max-width: 1000px) {
+    .margin-logo {
+      position: relative;
+      display: block;
+      margin-left: 3em;
+    }
+    height: 100%;
   }
 }
 
 /* Active navbar link styles */
 .navbar-nav {
   .nav-link.active {
-    color: #FAE8D4;
+    color: $colorhover;
     font-weight: 400;
   }
 }
 
 .nav-link {
-  color: white;
-  font-size: 1.2rem;
+  color: $colornav;
+  font-size: 1.3rem;
   margin-left: 2rem;
   margin-right: 1rem;
 }

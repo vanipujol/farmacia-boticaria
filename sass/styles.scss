@@ -1,4 +1,6 @@
-$colordarkgray: #3B4754;
+$colorgreen: #7D8566;
+$colorp: white;
+$colorparagraph: gray;
 
 @use 'assets/header';
 @use 'index';
@@ -39,13 +41,17 @@ a {
 
 h1 {
   font-size: 2rem;
-  color: #6D705C;
+  color: $colorgreen;
 }
 
 /* Removing bootstrap default margin bottom for paragraphs */
 p {
   margin-bottom: 0;
-  color: #2A2A2A;
+  color: $colorp;
+}
+
+li {
+  list-style: none;
 }
 
 /* sticky-whatsapp-logo image styles */
@@ -79,20 +85,20 @@ p {
 
 /* Section row icons styles */
 .section-row-icons {
-  background-color: #e9efd887;
+  background-color: rgba(126, 133, 100, 0.1);
 }
 
 /* Paragraph information icons styles */
 .paragraph-info-icons {
   font-size: 1.2rem;
-  color: #798DA3;
+  color: $colorparagraph;
   margin-top: 2rem;
 }
 
 /* Styling for span elements */
 span {
   font-weight: bold;
-  color: $colordarkgray;
+  color: rgba(42, 42, 42, 0.72);
   margin-bottom: 0.5rem;
   display: block;
 }
@@ -103,7 +109,7 @@ span {
   justify-content: center;
 }
 
-/* Hidden carousel styles for mobile */
+/* Global hidden styles for mobile */
 .hidden-mobile {
   display: block;
 }
@@ -115,7 +121,7 @@ span {
   }
 }
 
-/* Showed carousel styles for mobile */
+/* Showed global styles for mobile */
 .show-mobile {
   display: none;
 }
@@ -129,7 +135,7 @@ span {
 
 /*Styles for globals titles*/
 .global-title {
-  color: #7D8566;
+  color: $colorgreen;
   font-size: 3.5rem;
 }
 
@@ -141,14 +147,14 @@ span {
   }
 }
 
-.pharagraph-global-title {
-  color: gray;
+.pharagraph-global {
+  color: $colorparagraph;
   font-size: 1.3rem;
 }
 
 /* form styles for smaller screens */
 @media only screen and (max-width: 1000px) {
-  .pharagraph-global-title {
+  .pharagraph-global {
     font-size: 1rem;
     margin-bottom: 0.5rem;
   }
@@ -166,9 +172,10 @@ span {
 }
 
 .row-color {
-  background-color: #f5ece278;
+  background-color: rgba(126, 133, 100, 0.1);
 }
 
+/* Global image styles */
 .image-global {
   height: 60vh;
   background-position: center;
@@ -184,10 +191,6 @@ span {
 }
 
 .title-second {
-  color: #7D8566;
+  color: $colorgreen;
   margin: 3rem;
-}
-
-li {
-  list-style: none;
 }

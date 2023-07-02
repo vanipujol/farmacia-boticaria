@@ -1,5 +1,17 @@
+$img-points-title: '../img/banner/img-points-title.jpg';
+$colorgreen: #7E8564;
+$colorli: #F1F2EE;
+
+/* Add image in background image*/
 .img-points-title {
-  background-image: url('../img/banner/img-points-title.jpg');
+  background-image: url($img-points-title);
+}
+
+.background-color-map{
+  background-color: $colorgreen;
+  @media only screen and (max-width: 1000px) {
+    background-color: white;
+  }
 }
 
 .gif-maps {
@@ -12,29 +24,27 @@
   display: inline-block;
 }
 
-.text-overlay {
-  position: absolute;
-  top: 90%;
-  left: 70%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  margin-top: 12rem;
+.ul-points li {
+  color: $colorli;
+  font-size: 1.6rem;
+  margin-left: 5em;
+
+  /* Styles for smaller screens */
+  @media only screen and (max-width: 1000px) {
+    font-size: 1rem;
+    text-align: center;
+    margin-left: 0;
+    color: #2a2a2a;
+  }
 }
 
-.text-overlay li {
-  color: #3B4754;
-  font-size: 24px;
-}
-
+/* Styles for section hours */
 .section-hours {
   height: 10rem;
-}
-
-.asd {
+  margin-top: 6rem;
 }
 
 .title-three {
-  color: #3B4754;
-  font-size: 1.3rem;
+  color: $colorgreen;
+  margin: 1rem;
 }
-

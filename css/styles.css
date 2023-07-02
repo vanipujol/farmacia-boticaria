@@ -9,46 +9,51 @@
 }
 
 .navbar {
-  background-color: #7D8566;
+  background-color: #7E8564;
   font-weight: 300;
   height: 13vh;
+  border-bottom: 1px solid white;
+  /* Logo mobile styles for smaller screens */
 }
 .navbar a:hover {
-  color: #FAE8D4;
+  color: rgba(250, 232, 212, 0.7764705882);
+}
+.navbar .navbar-toggler {
+  margin-right: 1em;
+  border: 1px solid rgba(252, 252, 252, 0.6196078431);
 }
 .navbar .margin-logo {
   position: absolute;
   margin-left: 6rem;
 }
+@media only screen and (max-width: 1000px) {
+  .navbar {
+    height: 100%;
+  }
+  .navbar .margin-logo {
+    position: relative;
+    display: block;
+    margin-left: 3em;
+  }
+}
 
 /* Active navbar link styles */
 .navbar-nav .nav-link.active {
-  color: #FAE8D4;
+  color: rgba(250, 232, 212, 0.7764705882);
   font-weight: 400;
 }
 
 .nav-link {
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-left: 2rem;
   margin-right: 1rem;
-}
-
-/* Line navbar only index*/
-.navbarline::after {
-  content: "";
-  position: absolute;
-  left: 5%;
-  bottom: 0;
-  width: 90%;
-  height: 1px;
-  background-color: white;
 }
 
 /* Subheading styles in index.html */
 .about {
   font-size: 1.3rem;
-  color: #4C463C;
+  color: gray;
   display: block;
   font-weight: 300;
   white-space: pre-line;
@@ -82,7 +87,7 @@
   margin-top: 5rem;
 }
 
-/* Button container styles */
+/* Button styles */
 .button {
   position: relative;
   box-sizing: border-box;
@@ -103,6 +108,7 @@
   padding-right: 8px;
 }
 
+/* Slide effect fot the button */
 .slide-effect::before {
   position: absolute;
   content: "";
@@ -127,6 +133,7 @@
   font-style: italic;
 }
 
+/* Styles for scroll down arrow */
 .scroll-down-arrow {
   position: absolute;
   bottom: 1.25rem;
@@ -163,13 +170,14 @@
     transform: translateY(0);
   }
 }
+/* Add image in background image*/
 .img-about-title {
-  background-image: url("../img/banner/img-about-title.jpg");
+  background-image: url("../img/vitaly/img-vitaly-title.jpg");
 }
 
 /* Paragraph styles for the about section */
 .paragraph-about {
-  color: #798DA3;
+  color: gray;
   font-size: 1.1rem;
   white-space: pre-line;
 }
@@ -200,14 +208,14 @@
   font-weight: 300;
 }
 .testimonies-card p {
-  color: #fff;
+  color: white;
   font-size: 1.5rem;
 }
 .testimonies-card span {
   color: #a6a6a6;
 }
 .testimonies-card blockquote {
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 3rem 2rem 2.5rem 2.5rem;
   margin-top: 2rem;
   background-color: #fff;
@@ -235,6 +243,7 @@
   border: solid 0.625rem #a6a57a;
 }
 
+/* Add image in background image*/
 .img-contact-title {
   background-image: url("../img/banner/img-contact-title.jpg");
 }
@@ -245,7 +254,7 @@
 
 /* Contact section paragraph styles */
 .contact-paragraph {
-  color: #798DA3;
+  color: gray;
   display: block;
 }
 
@@ -298,12 +307,22 @@ input, textarea {
 
 /* Hover styles for submit button */
 .button-enviar:hover {
-  background-color: #FAE8D4;
-  color: #7D8566;
+  background-color: #2A2A2A;
+  color: white;
 }
 
+/* Add image in background image*/
 .img-points-title {
   background-image: url("../img/banner/img-points-title.jpg");
+}
+
+.background-color-map {
+  background-color: #7E8564;
+}
+@media only screen and (max-width: 1000px) {
+  .background-color-map {
+    background-color: white;
+  }
 }
 
 .gif-maps {
@@ -316,29 +335,33 @@ input, textarea {
   display: inline-block;
 }
 
-.text-overlay {
-  position: absolute;
-  top: 90%;
-  left: 70%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  margin-top: 12rem;
+.ul-points li {
+  color: #F1F2EE;
+  font-size: 1.6rem;
+  margin-left: 5em;
+  /* Styles for smaller screens */
+}
+@media only screen and (max-width: 1000px) {
+  .ul-points li {
+    font-size: 1rem;
+    text-align: center;
+    margin-left: 0;
+    color: #2a2a2a;
+  }
 }
 
-.text-overlay li {
-  color: #3B4754;
-  font-size: 24px;
-}
-
+/* Styles for section hours */
 .section-hours {
   height: 10rem;
+  margin-top: 6rem;
 }
 
 .title-three {
-  color: #3B4754;
-  font-size: 1.3rem;
+  color: #7E8564;
+  margin: 1rem;
 }
 
+/* Add image in background image*/
 .img-vitaly-title {
   background-image: url("../img/vitaly/img-vitaly-title.jpg");
 }
@@ -350,22 +373,60 @@ input, textarea {
   margin: 4rem;
 }
 
-/* Paragraph styles for the Vitaly section */
-.paragraph-vitaly {
-  color: #798DA3;
-  font-size: 1.3rem;
-  white-space: pre-line;
-  margin: 2rem;
-}
-
-/* Carousel styles for smaller screens */
-@media only screen and (max-width: 1000px) {
-  .paragraph-vitaly {
-    font-size: 1rem;
-  }
-}
 .card {
   margin-bottom: 1.5rem;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  min-height: 28em;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #7D8566;
+  font-weight: 400;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .content {
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+}
+
+.back {
+  background: #7D8566;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  line-height: 2rem;
+  color: #7D8566;
+  text-align: center;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.paragraph-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 1rem;
+  color: white;
 }
 
 /* Footer styles */
@@ -402,7 +463,7 @@ footer ul li span:hover {
 footer ul li .social-icons {
   display: flex;
   font-size: 1.3rem;
-  color: #fff;
+  color: white;
   transition: 1s ease-out;
 }
 footer ul li:nth-child(1):hover span {
@@ -440,13 +501,17 @@ a {
 
 h1 {
   font-size: 2rem;
-  color: #6D705C;
+  color: #7D8566;
 }
 
 /* Removing bootstrap default margin bottom for paragraphs */
 p {
   margin-bottom: 0;
-  color: #2A2A2A;
+  color: white;
+}
+
+li {
+  list-style: none;
 }
 
 /* sticky-whatsapp-logo image styles */
@@ -479,20 +544,20 @@ p {
 }
 /* Section row icons styles */
 .section-row-icons {
-  background-color: rgba(233, 239, 216, 0.5294117647);
+  background-color: rgba(126, 133, 100, 0.1);
 }
 
 /* Paragraph information icons styles */
 .paragraph-info-icons {
   font-size: 1.2rem;
-  color: #798DA3;
+  color: gray;
   margin-top: 2rem;
 }
 
 /* Styling for span elements */
 span {
   font-weight: bold;
-  color: #3B4754;
+  color: rgba(42, 42, 42, 0.72);
   margin-bottom: 0.5rem;
   display: block;
 }
@@ -503,7 +568,7 @@ span {
   justify-content: center;
 }
 
-/* Hidden carousel styles for mobile */
+/* Global hidden styles for mobile */
 .hidden-mobile {
   display: block;
 }
@@ -514,7 +579,7 @@ span {
     display: none;
   }
 }
-/* Showed carousel styles for mobile */
+/* Showed global styles for mobile */
 .show-mobile {
   display: none;
 }
@@ -538,14 +603,14 @@ span {
     margin-top: 2rem;
   }
 }
-.pharagraph-global-title {
+.pharagraph-global {
   color: gray;
   font-size: 1.3rem;
 }
 
 /* form styles for smaller screens */
 @media only screen and (max-width: 1000px) {
-  .pharagraph-global-title {
+  .pharagraph-global {
     font-size: 1rem;
     margin-bottom: 0.5rem;
   }
@@ -562,9 +627,10 @@ span {
 }
 
 .row-color {
-  background-color: rgba(245, 236, 226, 0.4705882353);
+  background-color: rgba(126, 133, 100, 0.1);
 }
 
+/* Global image styles */
 .image-global {
   height: 60vh;
   background-position: center;
@@ -581,10 +647,6 @@ span {
 .title-second {
   color: #7D8566;
   margin: 3rem;
-}
-
-li {
-  list-style: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

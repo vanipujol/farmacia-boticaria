@@ -1,8 +1,13 @@
+$colorgreen: #7D8566;
+$coloricon: white;
+$colorinstagram: #CC296C;
+$colorfacebook: #2C3456;
+
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 /* Footer styles */
 footer {
-  background-color: #7D8566;
+  background-color: $colorgreen;
   padding: 2rem;
   text-align: center;
   margin-top: 5rem;
@@ -35,16 +40,16 @@ footer {
       .social-icons{
         display: flex;
         font-size: 1.3rem;
-        color: #fff;
+        color: $coloricon;
         transition: 1s ease-out;
       }
 
       &:nth-child(1):hover span {
-        background: #2C3456;
+        background: $colorfacebook;
       }
 
       &:nth-child(2):hover span {
-        background: #CC296C;
+        background: $colorinstagram;
       }
     }
   }

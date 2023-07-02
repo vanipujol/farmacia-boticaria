@@ -1,10 +1,17 @@
+$img-vitaly-title: '../img/vitaly/img-vitaly-title.jpg';
+$colorgreen: #7D8566;
+$colorp: white;
+$colorspan: #a6a6a6;
+$colorparagraph: gray;
+
+/* Add image in background image*/
 .img-about-title {
-  background-image: url('../img/banner/img-about-title.jpg');
+  background-image: url($img-vitaly-title);
 }
 
 /* Paragraph styles for the about section */
 .paragraph-about {
-  color: #798DA3;
+  color: $colorparagraph;
   font-size: 1.1rem;
   white-space: pre-line;
 }
@@ -14,7 +21,7 @@
   position: relative;
   color: #000;
   text-align: center;
-  background-color: #7D8566;
+  background-color: $colorgreen;
   padding: 2rem;
   background-image: linear-gradient(-25deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
   box-sizing: border-box;
@@ -38,17 +45,17 @@
   }
 
   p {
-    color: #fff;
+    color: $colorp;
     font-size: 1.5rem;
   }
 
   span {
-    color: #a6a6a6;
+    color: $colorspan;
   }
 
   /*Testimonials quotes*/
   blockquote {
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 3rem 2rem 2.5rem 2.5rem;
     margin-top: 2rem;
     background-color: #fff;

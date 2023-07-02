@@ -1,8 +1,11 @@
+$img-contact-title: '../img/banner/img-contact-title.jpg';
 $colorgreen: #7D8566;
-$colorgray: #798DA3;
+$colorparagraph: gray;
+$colorfontbutton: white;
 
+/* Add image in background image*/
 .img-contact-title {
-  background-image: url('../img/banner/img-contact-title.jpg');
+  background-image: url($img-contact-title)
 }
 
 .contact-container {
@@ -11,7 +14,7 @@ $colorgray: #798DA3;
 
 /* Contact section paragraph styles */
 .contact-paragraph {
-  color: $colorgray;
+  color: $colorparagraph;
   display: block;
 }
 
@@ -58,7 +61,7 @@ input, textarea {
 /* Submit button styles */
 .button-enviar {
   background-color: $colorgreen;
-  color: white;
+  color: $colorfontbutton;
   border: none;
   border-radius: 2rem;
   width: 7rem;
@@ -66,7 +69,7 @@ input, textarea {
 
 /* Hover styles for submit button */
 .button-enviar:hover {
-  background-color: #FAE8D4;
-  color: #7D8566;
+  background-color: #2A2A2A;
+  color: $colorfontbutton;
 }
 
