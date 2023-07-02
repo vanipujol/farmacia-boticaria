@@ -1,4 +1,4 @@
-$img-vitaly-title: '../img/vitaly/img-vitaly-title.jpg';
+$img-about-title: '../img/banner/img-about-title.jpg';
 $colorgreen: #7D8566;
 $colorp: white;
 $colorspan: #a6a6a6;
@@ -6,7 +6,7 @@ $colorparagraph: gray;
 
 /* Add image in background image*/
 .img-about-title {
-  background-image: url($img-vitaly-title);
+  background-image: url($img-about-title);
 }
 
 /* Paragraph styles for the about section */
