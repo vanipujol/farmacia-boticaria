@@ -37,6 +37,10 @@ a {
 /* row margin for row styles */
 .margin-rows {
   margin: 4rem auto 4rem auto;
+
+  @media only screen and (max-width: 1024px) {
+    margin: auto;
+  }
 }
 
 h1 {
@@ -143,7 +147,6 @@ span {
 @media only screen and (max-width: 1000px) {
   .global-title {
     font-size: 2rem;
-    margin-top: 2rem;
   }
 }
 
@@ -155,7 +158,7 @@ span {
 /* form styles for smaller screens */
 @media only screen and (max-width: 1000px) {
   .pharagraph-global {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
   }
 }
@@ -163,12 +166,18 @@ span {
 .img-global-title {
   max-width: 100%;
 }
+/* Padding with 2 rem */
+.padding-2{
+  padding: 2rem;
+}
+/*Remove all margin and padding from bootstrap */
+.remove-margin-all {
+  margin: 0;
+}
 
 /*Remove margin and padding from bootstrap */
-.remove-margin-padding {
+.remove-margin {
   margin-right: 0;
-  padding-right: 0;
-  padding-left: 0;
 }
 
 .row-color {

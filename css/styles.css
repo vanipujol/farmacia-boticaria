@@ -335,6 +335,11 @@ input, textarea {
   display: inline-block;
 }
 
+/* Removing padding from Boostrap*/
+.remove-padding {
+  padding: 0 !important;
+}
+
 .ul-points li {
   color: #F1F2EE;
   font-size: 1.6rem;
@@ -343,7 +348,7 @@ input, textarea {
 }
 @media only screen and (max-width: 1000px) {
   .ul-points li {
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
     margin-left: 0;
     color: #2a2a2a;
@@ -353,7 +358,12 @@ input, textarea {
 /* Styles for section hours */
 .section-hours {
   height: 10rem;
-  margin-top: 6rem;
+  margin-top: 5rem;
+}
+@media only screen and (max-width: 1024px) {
+  .section-hours {
+    margin-top: 4rem;
+  }
 }
 
 .title-three {
@@ -498,6 +508,11 @@ a {
 .margin-rows {
   margin: 4rem auto 4rem auto;
 }
+@media only screen and (max-width: 1024px) {
+  .margin-rows {
+    margin: auto;
+  }
+}
 
 h1 {
   font-size: 2rem;
@@ -600,7 +615,6 @@ span {
 @media only screen and (max-width: 1000px) {
   .global-title {
     font-size: 2rem;
-    margin-top: 2rem;
   }
 }
 .pharagraph-global {
@@ -611,7 +625,7 @@ span {
 /* form styles for smaller screens */
 @media only screen and (max-width: 1000px) {
   .pharagraph-global {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
   }
 }
@@ -619,11 +633,19 @@ span {
   max-width: 100%;
 }
 
+/* Padding with 2 rem */
+.padding-2 {
+  padding: 2rem;
+}
+
+/*Remove all margin and padding from bootstrap */
+.remove-margin-all {
+  margin: 0;
+}
+
 /*Remove margin and padding from bootstrap */
-.remove-margin-padding {
+.remove-margin {
   margin-right: 0;
-  padding-right: 0;
-  padding-left: 0;
 }
 
 .row-color {
